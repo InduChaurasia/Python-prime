@@ -1,10 +1,14 @@
+import math
+
 def is_prime(inputValue):   
     num = inputValue
     if(num <= 1):
         return False
-    for i in range(2 , num -1):
-        if(i != 0 and i!=1 and i!=num and num%i==0):
-            return False   
+        
+    sqrtNum = int(math.sqrt(num))
+    for i in range(2 , sqrtNum+1):
+        if(num%i==0):
+            return False
             
     return True
     
